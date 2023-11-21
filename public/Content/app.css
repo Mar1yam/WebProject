@@ -1,0 +1,705 @@
+@charset "UTF-8";
+
+
+/*I mixed my old navbar and added some affects, learned this through bootstrap i looked through a bunch 
+did some stuff with trial and error honestly.*/
+.hoverable {
+    display: inline-block;
+    backface-visibility: hidden;
+    vertical-align: middle;
+    position: relative;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    transition-duration: .3s;
+    transition-property: transform;
+  }
+  
+  .hoverable:before {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+  }
+  
+  .hoverable:hover,
+  .hoverable:active,
+  .hoverable:focus {
+    transform: translateY(-5px);
+  }
+  
+  .hoverable:hover:before,
+  .hoverable:active:before,
+  .hoverable:focus:before {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    color: #999; 
+    cursor: pointer; 
+    transition: color 0.3s;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 10px;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #fff; 
+  }
+
+  @keyframes bounce-animation {
+    16.65% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  
+    33.3% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+    }
+  
+    49.95% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+  
+    66.6% {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
+  
+    83.25% {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  
+  .bounce {
+    animation-name: bounce-animation;
+    animation-duration: 2s;
+  }
+  
+  /*everything below here is just setting up the page, so dont worry about it */
+  
+  @media (min-width: 768px) {
+    .navbar{
+      text-align: center !important;
+      float: none;
+      display: inline-block;
+    }
+  }
+  
+  body {
+    background-color: rgba(0,0,0,1);
+    font-weight:600;
+    text-align:center !important;
+    color: white;
+  }
+  
+  nav {
+	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    text-transform:uppercase;
+    li {
+      margin-left: 3em;
+      margin-right: 3em;
+      a{
+        transition: .5s color ease-in-out;
+      }
+    }
+  }
+
+
+
+
+  /*-------------------------------------------HOME PAGE-----------------------------------------*/
+
+/* Name: Mariyam Member | Student ID: 100867858 | Class: Web & Script Programming */
+/******************************************************Portfolio Project CSS***********************************************************/
+
+
+
+
+body {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+/**********************************************************Home Page********************************************************************/
+
+
+
+
+/*If you dont like the page colour or size you can change it here*/
+section{
+    width: 100%;
+    height: 100vh;
+	padding: 0%;
+    background-size: cover;
+    background-repeat:no-repeat;
+	position: relative;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+/*✨ Customizing my navagation bar ✨*/
+ul{
+    list-style: none ;
+}
+a{
+    text-decoration:none;
+}
+nav {
+	box-shadow:5px 5px 20px rgba(0,0,0,0.2);
+	padding:0px 5%;
+	position: fixed;
+	top: 0;
+}
+
+/*Adujusting this image was such a pain it took me soo long! But finally it works 😭.*/
+.image-101 img {
+    width: 100%; 
+    height: auto;
+}
+.image-101{
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+.image-101{
+	width: 450px;
+    height: 450px;
+}
+
+/*Customizing the text*/
+.text-container p:nth-child(2){
+	font-family:calibri;
+	font-weight:bold;
+	height: 1vh;
+	letter-spacing:1px;
+	color: black;
+	font-size:60px;
+}
+.text-container p:nth-child(3){
+	font-family: myriad pro regular;
+	color: white;
+	font-size:30px;
+	line-height:30px;
+	align-items: center;
+}
+.text-container p{
+	margin:45px 0px 25px;
+	line-height:0px;
+}
+
+/*Where the text going to be placed on the home page*/
+.text-container{
+	position: absolute;
+	left:13%;
+	top:55%;
+	transform:translate(-13%,-42%);
+}
+
+
+
+
+/***************************************************************About Me***************************************************************/
+
+
+
+
+.about-container{
+	width:100%;
+	height: 91.3%;
+	background:#ffffff;
+}
+
+/*The profile image*/
+.about-container img{
+	height: 250px;
+	border-radius: 50%;
+	object-fit: cover;
+	height: 25vh;
+	position: absolute;
+	top: 15%;
+	left: 5%;
+}
+
+/*The text section*/
+.about-text{
+	width:100px;
+} 
+.about-text p:nth-child(1){
+	font-family:calibri;
+	font-weight:bold;
+	height: 1vh;
+	letter-spacing:1px;
+	color: black;
+	font-size:60px;
+	position: absolute;
+	left: 23%;
+	top: 20%;
+	transform:translate(-13%,-42%);
+}
+
+.about-text p:nth-child(2){
+	color:#8B4513;
+	font-family:calibri;
+	font-size:23px;
+	height: 1vh;
+	letter-spacing:1px;
+	text-align: left;
+	position: absolute;
+	left: 10%;
+	top:45%;
+	transform:translate(-13%,-42%);
+	max-width: 40%;
+	margin: 0 auto;
+}
+
+.about-text p:nth-child(3){
+	color:#8B4513;
+	font-family:calibri;
+	font-size:23px;
+	height: 1vh;
+	letter-spacing:1px;
+	text-align: left;
+	position: absolute;
+	left: 10.5%;
+	top:55%;
+	transform:translate(-13%,-42%);
+	max-width: 40%;
+	margin: 0 auto;
+}
+
+.about-text p:nth-child(4){
+	color:#8B4513;
+	font-family:calibri;
+	font-size:23px;
+	height: 1vh;
+	letter-spacing:1px;
+	text-align: left;
+	position: absolute;
+	left: 11%;
+	top:65%;
+	transform:translate(-13%,-42%);
+	max-width: 40%;
+	margin: 0 auto;
+}
+
+.about-text p:nth-child(5){
+	color:#8B4513;
+	font-family:calibri;
+	font-size:23px;
+	height: 1vh;
+	letter-spacing:1px;
+	text-align: left;
+	position: absolute;
+	left: 10.5%;
+	top:75%;
+	transform:translate(-13%,-42%);
+	max-width: 40%;
+	margin: 0 auto;
+}
+
+.about-text p:nth-child(6){
+	color:#8B4513;
+	font-family:calibri;
+	font-size:23px;
+	height: 1vh;
+	letter-spacing:1px;
+	text-align: left;
+	position: absolute;
+	left: 9.4%;
+	top:85%;
+	transform:translate(-13%,-42%);
+	max-width: 40%;
+	margin: 0 auto;
+}
+
+.about-text p:nth-child(7){
+	font-family:calibri;
+	font-weight:bold;
+	height: 1vh;
+	letter-spacing:1px;
+	color: black;
+	font-size:60px;
+	position: absolute;
+	left: 70%;
+	top: 20%;
+	transform:translate(-13%,-42%);
+}
+
+/*Where I place my video*/
+.video{
+	position: absolute;
+	top: 37%;
+	left: 53%;
+}
+
+.video video {
+    width: 560px; /* Set the width */
+    height: 315px; /* Set the height */
+}
+
+
+
+
+/***************************************************************Projects*****************************************************************/
+
+
+.project-container{
+	width: 100%;
+  height: 91.3%;
+	background: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/*Title of the page*/
+.project-text p:nth-child(1){
+font-family: calibri;
+font-weight:bold;
+color:#1d1c1c;
+font-size:30px;
+line-height:0px;
+font-size: 60px;
+position: absolute;
+top: 18%;
+left: 38%;
+margin: 0;
+}
+
+/*Everything to do with the box is below this point.*/
+.box-container{
+display:flex;
+justify-content:space-between;
+}
+
+/*Sizing of the box*/
+.box-1,.box-2,.box-3{
+width: 360px;
+height:360px;
+background-repeat: no-repeat;
+background-size: cover;
+box-shadow:2px 2px 18px rgba(0,0,0,0.3);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin: 120px 30px 0 30px;
+background-position: center;
+border-radius: 10%;
+top: -5%;
+}
+
+/*Background image of the box, all these images were taken by me.*/
+.box-1{
+background-image:url("../Assets/images/IMG-CS.jpg");
+}
+.box-2{
+background-image:url("../Assets/images/IMG-WS.jpg");
+}
+.box-3{
+background-image: url("../Assets/images/IMG-5598.jpg");
+}
+
+/*Number on the box*/
+.box-1 span,
+.box-2 span,
+.box-3 span{
+width:40px;
+height:40px;
+border-radius:50%;
+background-color:#ffffff;
+display: flex;
+justify-content: center;
+align-items:center;
+font-family: calibri;
+font-weight: bold;
+position: absolute;
+top: 3%;
+left: 8%;
+}
+
+/*Title of the box*/
+.box-1 p:nth-child(2){
+color:#FFFFFF;
+font-family: calibri;
+font-size: 23px;
+line-height:0px;
+position: absolute;
+top: 8%;
+left: 35%;
+}
+.box-2 p:nth-child(2){
+	color:#FFFFFF;
+	font-family: calibri;
+	font-size: 23px;
+	line-height:0px;
+	position: absolute;
+	top: 8%;
+	left: 28%;
+}
+.box-3 p:nth-child(2){
+	color:#FFFFFF;
+	font-family: calibri;
+	font-size: 23px;
+	line-height:0px;
+	position: absolute;
+	top: 8%;
+	left: 25%;
+}
+
+
+  /*I want the colour of the picture to dim as the mouse goes over it*/
+  .box-1:hover::before, .box-2:hover::before, .box-3:hover::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10%;
+  }
+  
+  .box-1, .box-2, .box-3 {
+	position: relative;
+}
+
+  /*The text after you hover your mouse over the box*/
+  .overlay-text {
+	font-family: calibri;
+	display: block;
+	font-size: 14px;
+	position: absolute;
+	top: 16%;
+	left: 3%;
+	color: white;
+	text-align: left;
+  }
+
+  /*I added a link on my third box showing my work from two years ago.*/
+.overlay-text a.custom-link {
+  font-family: calibri;
+  font-size: medium;
+  color: white; /* Change the color */
+  text-decoration: underline;
+  position: absolute;
+  left: 40%;
+}
+
+/* I made sure that when i'm using my phone or tablet and not just my 
+	computer then this code will be used instead so that there is no issues with not seeing the information*/
+@media (hover) {
+	/*I am addng transitions here for the box to move down as the mouse hovers over the box*/
+	.box-1,
+	.box-2,
+	.box-3 {
+	transition: transform 0.3s ease;
+	}
+
+	.box-1:hover,
+	.box-2:hover,
+	.box-3:hover {
+	transform: translateY(10px);
+	}
+
+	.box-1:focus,
+	.box-2:focus,
+	.box-3:focus {
+	transform: translateY(10px);
+	}
+
+	.box-1:hover .overlay-text, .box-2:hover .overlay-text, .box-3:hover .overlay-text {
+		display: block; /* Display text on hover */
+	  }
+
+}
+
+
+
+/*********************************************CONTACT*************************************************/
+
+
+.contact{
+	width:100%;
+	height: 90.2%;
+	background:#ffffff;
+	width: 100%;
+}
+
+.contact-container {
+    background-color: #fff; 
+    height: 1vh;
+    letter-spacing:1px;
+    color: black;
+    font-size:20px;
+}
+
+/*Even tho i did the image before it was such a pin to figure out the issue in this one, but i finally got it to work.*/
+.image-102 img {
+    width: 100%;
+    height: auto;
+}
+.image-102 {
+    position: absolute;
+    top: 60%; 
+    left: 75%;
+    transform: translate(-50%, -50%); 
+}
+.image-102 {
+    width: 600px;
+}
+
+    /*Title*/
+	.project-text-101 p:nth-child(1){
+		font-family: calibri;
+		font-weight:bold;
+		color:#1d1c1c;
+		font-size:30px;
+		line-height:0px;
+		font-size: 60px;
+		position: absolute;
+		top: 22%;
+		left: 15%;
+		margin: 0;
+		transform:translate(-13%,-42%);
+	}
+
+      
+/*Adusting the contact me section, I want it on the left side of the page adnd to take up that half the page size.*/
+form {
+    max-width: 800px;
+    margin: 0 auto;
+	  position: absolute;
+	  left: 5%;
+	  top: 35%;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+label {
+    font-weight: bold;
+	font-family:calibri;
+    position: relative;
+    left: -33%;
+
+}
+
+/*Sizing of the boxes*/
+input, textarea {
+    width: calc(150% - 20px); 
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    font-size: 18px; 
+	margin: 14px 0px 0 0px;
+}
+
+button {
+    width: calc(157% - 24px);
+    padding: 12px;
+    border: none;
+    border-radius: 8px !important; 
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px; 
+    cursor: pointer;
+	  margin: 10px 0px 0 0px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/****************************************************************FOOTER*****************************************************************/
+
+
+
+/*The footer was the easiet part from everything*/
+footer{
+	background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+footer p{
+	font-family: calibri;
+}
+
+footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+ 
+.copyright{
+	color:black;
+	font-size: 15px;
+	position: absolute;
+	left:20%;
+	bottom:3px;
+	transform: translateX(-50%);
+}
+ 
+
+/***********************************************Socail Icons*******************************************/
+.social-icon{
+	color: #999;
+	text-decoration: none;
+	position: absolute;
+	right: 2%;
+	bottom: 8px;
+}
+
+.social-icon:hover{
+	color: #1d1c1c;
+}
+
+.social-icon ion-icon {
+	font-size: 2em;
+  }
+  .linkedin-icon,
+  .github-icon {
+	color: #999;
+	text-decoration: none;
+	position: relative;
+  }
+  
+  .linkedin-icon:hover,
+  .github-icon:hover {
+	color: #1d1c1c;
+  }
+  
+  .linkedin-icon ion-icon,
+  .github-icon ion-icon {
+	font-size: 2em;
+  }
+  
+  

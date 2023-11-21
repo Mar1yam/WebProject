@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!--CSS files-->
+  <link rel='stylesheet' href='/Content/app.css' />
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link herf="Tablet-mode.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:1099px)">
+  <link herf="Phone-Mode.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)">
+</head>
+<body>
+
+    <!--Home-->
+    <% include partials/Home.ejs %>
+    <!--About-->
+    <% include partials/About.ejs %>
+    <!--Projects-->
+    <% include partials/Project.ejs %>
+    <!--Contact-->
+    <% include partials/Contact.ejs %>
+
+<!--Bottom navbar-->
+<footer>
+<!--I won't be adding my email, I hope my marks don't get cut off for that 🤞🏻-->
+    <div class="footer-container"></div>
+
+    <!--Copyright-->
+    <p class="copyright">@ Copyright <b>Mariyam Member</b>. All Rights Reserved Designed by Mariyam Suhel Member.</p>
+
+</footer>
+   </div>
+
+  <!--Script Files-->
+  <script src = "/Scripts/app.js"></script>
+  <script src = "/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src = "/jquery/dist/jquery.min.js"></script>
+</body>
+</html>

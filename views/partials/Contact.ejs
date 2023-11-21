@@ -1,0 +1,99 @@
+<section id="contact">
+
+<link rel='stylesheet' href='/Content/app.css' />
+<link rel='stylesheet' href='/Content/phone.css' />
+<link rel='stylesheet' href='/Content/tablet.css' />
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" />
+<link herf="Tablet-mode.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:1099px)">
+<link herf="Phone-Mode.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)">
+
+<!--Nav Bar-->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fa-solid fa-code"></i> mar1yam</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a id="len1" class="hoverable nav-link nav-link-clicked" href="/home">
+            <i class="fa-solid fa-house"></i> Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a id="len2" class="hoverable nav-link nav-link-clicked" href="/about">
+            <i class="fa-solid fa-venus"></i> About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a id="len3" class="hoverable nav-link nav-link-clicked" href="/projects">
+            <i class="fa-solid fa-laptop"></i> Projects
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a id="len3" class="hoverable nav-link nav-link-clicked" href="/assignmentslist">
+            <i class="fa-solid fa-laptop"></i> Assignment
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a id="len4" class="hoverable nav-link nav-link-clicked" href="/contact">
+            <i class="fa-solid fa-address-book"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="contact"></div>
+    
+    <!--Title-->
+    <div class="contact-container">
+    <div class="project-text-101">
+    <p>Contact Me</p>
+    </div>
+
+        <!--Side note: I want this image to take half of the page. 
+        The source of this image: https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub-->
+    <div class="image-102">
+        <img src="../Assets/images/GIF-GITHUB.gif">
+    </div>
+
+    <!--Contact Me section (I woudld like for this to take half the page)-->
+        <form>
+            <div class="form-group">
+                <form action=mailto:mariyam.member@ontariotechu.net ?subject=Contact Form method="post">
+
+                    <!--User puts in name-->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!--User puts in email-->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!--User puts in comment-->
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" required></textarea>
+            </div>
+
+            <!--Submit button-->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+  <!--Script Files-->
+  <script src = "/Scripts/app.js"></script>
+  <script src = "/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src = "/jquery/dist/jquery.min.js"></script>
