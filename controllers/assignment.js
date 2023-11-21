@@ -19,7 +19,7 @@ module.exports.DislayAssignmentlist = async (req,res,next)=>{ //< Mark function 
     }
  };
 
- module.exports.AddAssignment = async (req,res,next)=>{
+ module.exports.AddAssignment = (req,res,next)=>{
     try{
         res.render('assignment/add',
         {
